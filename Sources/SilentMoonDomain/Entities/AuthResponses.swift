@@ -5,11 +5,9 @@
 //  Created by Kerimov Qehreman on 09.08.26.
 //
 
-
-
 import Foundation
 
-public struct SimpleMessageResponse: Sendable {
+public struct SimpleMessageResponseEntity: Sendable {
     public let message: String
     
     public init(message: String) {
@@ -17,7 +15,7 @@ public struct SimpleMessageResponse: Sendable {
     }
 }
 
-public struct ResendOtpResponse: Sendable {
+public struct ResendOtpResponseEntity: Sendable {
     public let message: String
     public let otpExpiresAt: String
     
@@ -27,19 +25,19 @@ public struct ResendOtpResponse: Sendable {
     }
 }
 
-public struct AuthResponse: Sendable {
+public struct AuthResponseEntity: Sendable {
     public let accessToken: String
     public let refreshToken: String
     public let tokenType: String
     public let expiresIn: Int
-    public let user: UserProfile
+    public let user: UserProfileEntity
     
     public init(
         accessToken: String,
         refreshToken: String,
         tokenType: String,
         expiresIn: Int,
-        user: UserProfile
+        user: UserProfileEntity
     ) {
         self.accessToken = accessToken
         self.refreshToken = refreshToken
@@ -49,7 +47,7 @@ public struct AuthResponse: Sendable {
     }
 }
 
-public struct UserProfile: Sendable {
+public struct UserProfileEntity: Sendable {
     public let id: String
     public let name: String
     public let email: String
