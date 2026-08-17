@@ -8,17 +8,17 @@
 import Foundation
 
 public struct CourseSummaryEntity{
-    public let id: String
+    public let id: Int
     public let title: String
     public let subtitle: String
     public let type: String
-    public let categoryId: String
+    public let categoryId: Int
     public let imageUrl: String
     public let durationSec: Int
     public let isFeatured: Bool
     public let narrators: [String]
     
-    public init(id: String, title: String, subtitle: String, type: String, categoryId: String, imageUrl: String, durationSec: Int, isFeatured: Bool, narrators: [String]) {
+    public init(id: Int, title: String, subtitle: String, type: String, categoryId: Int, imageUrl: String, durationSec: Int, isFeatured: Bool, narrators: [String]) {
         self.id = id
         self.title = title
         self.subtitle = subtitle
