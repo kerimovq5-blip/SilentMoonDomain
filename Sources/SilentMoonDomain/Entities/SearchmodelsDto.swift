@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CourseSummary{
+public struct CourseSummaryEntity{
     public let id: String
     public let title: String
     public let subtitle: String
@@ -31,7 +31,7 @@ public struct CourseSummary{
     }
 }
 
-public struct PaginationMeta {
+public struct PaginationMetaEntity {
     public let page: Int
     public let limit: Int
     public let total: Int
@@ -45,12 +45,16 @@ public struct PaginationMeta {
     }
 }
 
-public struct SearchResponse {
+public struct SearchResponseEntity {
     public let query: String
-    public let data: [CourseSummary]
-    public let meta: PaginationMeta
+    public let data: [CourseSummaryEntity]
+    public let meta: PaginationMetaEntity
     
-    public init(query: String, data: [CourseSummary], meta: PaginationMeta) {
+    public init(
+        query: String,
+        data: [CourseSummaryEntity],
+        meta: PaginationMetaEntity
+    ) {
         self.query = query
         self.data = data
         self.meta = meta
