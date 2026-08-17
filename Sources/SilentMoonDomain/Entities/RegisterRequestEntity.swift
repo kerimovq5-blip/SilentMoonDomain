@@ -1,0 +1,23 @@
+//
+//  RegisterRequestEntity.swift
+//  SilentMoon
+//
+//  Created by Kerimov Qehreman on 30.07.26.
+//
+
+import Foundation
+
+   public struct RegisterRequestEntity: Encodable {
+       public let name: String
+       public let email: String
+       public let password: String
+       
+   public init(name: String, email: String, password: String) {
+           self.name = name
+           self.email = email
+           self.password = password
+       }
+     
+    }
+
+
