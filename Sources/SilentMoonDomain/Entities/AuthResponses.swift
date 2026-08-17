@@ -4,9 +4,7 @@
 //
 //  Created by Kerimov Qehreman on 09.08.26.
 //
-
 import Foundation
-
 public struct SimpleMessageResponseEntity: Sendable {
     public let message: String
     
@@ -14,7 +12,6 @@ public struct SimpleMessageResponseEntity: Sendable {
         self.message = message
     }
 }
-
 public struct ResendOtpResponseEntity: Sendable {
     public let message: String
     public let otpExpiresAt: String
