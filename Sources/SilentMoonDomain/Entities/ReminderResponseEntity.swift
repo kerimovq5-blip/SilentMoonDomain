@@ -8,12 +8,12 @@
 import Foundation
  
 public struct ReminderResponseEntity: Sendable {
-    public let id: String
+    public let id: Int
     public let time: String
     public let days: [Int]
     public let message: String
     
-    public init (id: String, time: String, days: [Int], message: String) {
+    public init (id: Int, time: String, days: [Int], message: String) {
         self.id = id
         self.time = time
         self.days = days
