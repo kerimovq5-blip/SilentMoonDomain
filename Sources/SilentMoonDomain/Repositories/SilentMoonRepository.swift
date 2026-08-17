@@ -31,4 +31,10 @@ public protocol SilentMoonRepository: Sendable {
     func getTopics() async -> Result<[String], Error>
     
     func updateTopics(topicIds: [String]) async -> Result<[String], Error>
+    
+    func getReminders() async -> Result<[ReminderResponseEntity], Error>
+        func setReminder(time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
+        func updateReminder(id: String, time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
+        func deleteReminder(id: String) async -> Result<Void, Error>
+    
 }
