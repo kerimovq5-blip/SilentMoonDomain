@@ -15,21 +15,15 @@ public protocol SilentMoonRepository: Sendable {
     func verifyEmail(email: String, otp: String) async -> Result<AuthResponseEntity, Error>
     
     func resendOtp(email: String) async -> Result<ResendOtpResponseEntity, Error>
-    
     func googleLogin(idToken: String) async -> Result<AuthResponseEntity, Error>
-    
     func forgotPassword(email: String) async -> Result<SimpleMessageResponseEntity, Error>
-    
     func resetPassword(email: String, otp: String, newPassword: String) async -> Result<SimpleMessageResponseEntity, Error>
-    
     func refreshToken() async -> Result<AuthResponseEntity, Error>
-    
     func logout() async -> Result<Void, Error>
     
     func search(query: String, type: String?, page: Int, limit: Int) async -> Result<SearchResponseEntity, Error>
     
     func getTopics() async -> Result<[String], Error>
-    
     func updateTopics(topicIds: [String]) async -> Result<[String], Error>
     
     func getReminders() async -> Result<[ReminderResponseEntity], Error>
@@ -37,4 +31,6 @@ public protocol SilentMoonRepository: Sendable {
     func updateReminder(id: Int, time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
     func deleteReminder(id: Int) async -> Result<Void, Error>
     
+    func getCourses(page: Int, limit: Int) async -> Result<CoursesResponseEntity, Error>
+    func getCourseDetail(id: Int) async -> Result<CourseEntity, Error>
 }

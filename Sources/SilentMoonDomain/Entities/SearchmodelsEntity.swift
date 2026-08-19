@@ -1,5 +1,5 @@
 //
-//  Searchmodels.swift
+//  SearchmodelsEntity.swift
 //  SilentMoon
 //
 //  Created by Kerimov Qehreman on 02.08.26.
