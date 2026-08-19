@@ -24,7 +24,7 @@ public protocol SilentMoonRepository: Sendable {
     func search(query: String, type: String?, page: Int, limit: Int) async -> Result<SearchResponseEntity, Error>
     
     func getTopics() async -> Result<[String], Error>
-    func updateTopics(topicIds: [String]) async -> Result<[String], Error>
+    func updateTopics(topicIds: [Int]) async -> Result<[String], Error>
     
     func getReminders() async -> Result<[ReminderResponseEntity], Error>
     func setReminder(time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
