@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol UseCases : Sendable {
+public protocol SilentMoonUseCases : Sendable {
     func register(name: String, email: String, password: String) async -> Result<RegisterResponseEntity, Error>
     
     func login(email: String, password: String) async -> Result<AuthResponseEntity, Error>

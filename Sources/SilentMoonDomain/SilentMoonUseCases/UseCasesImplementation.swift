@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class UseCasesImplemantation: UseCases {
+final class UseCasesImplemantation: SilentMoonUseCases {
     
     private let repository: SilentMoonRepository
     public init(repository: SilentMoonRepository) {
