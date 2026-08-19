@@ -8,19 +8,19 @@
 import Foundation
 
 public struct ChooseTopicEntity: Decodable , Sendable{
-    public let id: Int
+    public let topicsId: Int
     public let title: String
     
-    public init (id: Int, title: String) {
-        self.id = id
+    public init (topicsId: Int, title: String) {
+        self.topicsId = topicsId
         self.title = title
     }
 }
 public struct UpdateTopicEntity: Decodable , Sendable {
-    public let id: Int
+    public let topicsId: Int
     
-    public init (id: Int) {
-        self.id = id
+    public init (topicsId: Int) {
+        self.topicsId = topicsId
     }
     
 }
