@@ -9,6 +9,7 @@ import Foundation
 
 final class UseCasesImplemantation: SilentMoonUseCases {
     
+    
     private let repository: SilentMoonRepository
     public init(repository: SilentMoonRepository) {
         self.repository = repository
@@ -54,11 +55,11 @@ final class UseCasesImplemantation: SilentMoonUseCases {
         await repository.search(query: query, type: type, page: page, limit: limit)
     }
 
-    func getTopics() async -> Result<[String], any Error> {
+    func getTopics() async -> Result<[ChooseTopicEntity], any Error> {
         await repository.getTopics()
     }
 
-    func updateTopics(topicIds: [String]) async -> Result<[String], any Error> {
+    func updateTopics(topicIds: [Int]) async -> Result<[ChooseTopicEntity], any Error> {
         await repository.updateTopics(topicIds: topicIds)
     }
 
