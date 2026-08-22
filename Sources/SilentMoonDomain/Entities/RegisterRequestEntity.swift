@@ -7,7 +7,7 @@
 
 import Foundation
 
-   public struct RegisterRequestEntity: Encodable {
+   public struct RegisterRequest: Encodable {
        public let name: String
        public let email: String
        public let password: String
@@ -18,6 +18,11 @@ import Foundation
            self.password = password
        }
      
+      public  enum CodingKeys: String, CodingKey {
+            case name = "name"
+            case email = "email"
+            case password = "password"
+        }
     }
 
 
