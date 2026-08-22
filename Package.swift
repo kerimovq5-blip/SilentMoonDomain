@@ -1,4 +1,4 @@
-// swift-tools-version: 6.3
+// swift-tools-version: 5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -22,5 +22,5 @@ let package = Package(
         ),
         
     ],
-    swiftLanguageModes: [.v6]
+    //swiftLanguageModes: [.v6]
 )
