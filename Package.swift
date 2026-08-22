@@ -21,6 +21,6 @@ let package = Package(
             name: "SilentMoonDomain"
         ),
         
-    ]
-    //swiftLanguageModes: [.v6]
+    ],
+    swiftLanguageModes: [.version("6.0")]
 )
