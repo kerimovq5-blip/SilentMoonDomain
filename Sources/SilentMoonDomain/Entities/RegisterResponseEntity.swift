@@ -7,7 +7,7 @@
 
 import Foundation
  
-public struct RegisterResponseEntity {
+public struct RegisterResponseEntity: Sendable {
     public let message: String
     public let email: String
     public let otpExpiresAt: String

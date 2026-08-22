@@ -5,7 +5,7 @@
 //  Created by Kerimov Qehreman on 15.08.26.
 //
 
-public struct ErrorEntity : Error {
+public struct ErrorEntity : Error , Sendable {
    public var statuscode: Int
    public let statusmessage: String
   public let success: Bool

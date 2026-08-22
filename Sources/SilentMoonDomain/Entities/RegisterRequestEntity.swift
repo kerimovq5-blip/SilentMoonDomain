@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RegisterRequestEntity: Encodable {
+public struct RegisterRequestEntity: Encodable , Sendable {
        public let name: String
        public let email: String
        public let password: String
