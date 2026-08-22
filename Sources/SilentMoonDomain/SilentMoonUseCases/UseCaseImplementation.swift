@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class UseCasesImplemantation: SilentMoonUseCases, @unchecked Sendable {
+public final class UseCasesImplemantation: SilentMoonUseCases {
     
     private let repository: SilentMoonRepository
     public init(repository: SilentMoonRepository) {
