@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol SilentMoonUseCases{
+public protocol SilentMoonUseCases : Sendable {
     func register(name: String, email: String, password: String) async -> Result<RegisterResponseEntity, Error>
     
     func login(email: String, password: String) async -> Result<AuthResponseEntity, Error>
@@ -22,8 +22,8 @@ public protocol SilentMoonUseCases{
     
     func search(query: String, type: String?, page: Int, limit: Int) async -> Result<SearchResponseEntity, Error>
     
-    func getTopics() async -> Result<[ChooseTopicEntity], Error>
-    func updateTopics(topicIds: [Int]) async -> Result<[ChooseTopicEntity], Error>
+    func getTopics() async -> Result<[String], Error>
+    func updateTopics(topicIds: [Int]) async -> Result<[String], Error>
     
     func getReminders() async -> Result<[ReminderResponseEntity], Error>
     func setReminder(time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
