@@ -12,7 +12,6 @@ public struct AccountResponseEntity: Encodable {
     public let userName: String?
     public let email: String?
     public let avatarUrl: String?
-    
-    
+
     
 }
