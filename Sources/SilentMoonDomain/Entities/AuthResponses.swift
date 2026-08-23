@@ -44,27 +44,3 @@ public struct AuthResponseEntity: Sendable {
     }
 }
 
-public struct UserProfileEntity: Sendable {
-    public let id: String
-    public let name: String
-    public let email: String
-    public let emailVerified: Bool
-    public let avatarUrl: String?
-    public let createdAt: String
-    
-    public init(
-        id: String,
-        name: String,
-        email: String,
-        emailVerified: Bool,
-        avatarUrl: String?,
-        createdAt: String
-    ) {
-        self.id = id
-        self.name = name
-        self.email = email
-        self.emailVerified = emailVerified
-        self.avatarUrl = avatarUrl
-        self.createdAt = createdAt
-    }
-}
