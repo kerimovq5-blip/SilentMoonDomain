@@ -87,5 +87,11 @@ public final class UseCasesImplemantation: SilentMoonUseCases,  Sendable {
         await repository.getCourseDetail(id: id)
     }
 
+    public func getProfile() async -> Result<UserProfileEntity, any Error> {
+           await repository.getProfile()
+       }
     
+       public func updateProfile(firstName: String?, lastName: String?, avatarUrl: String?) async -> Result<UserProfileEntity, any Error> {
+           await repository.updateProfile(firstName: firstName, lastName: lastName, avatarUrl: avatarUrl)
+       }
 }

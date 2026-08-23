@@ -33,4 +33,7 @@ public protocol SilentMoonRepository: Sendable {
     
     func getCourses(page: Int, limit: Int) async -> Result<CoursesResponseEntity, Error>
     func getCourseDetail(id: Int) async -> Result<CourseEntity, Error>
+    
+    func getProfile() async -> Result<UserProfileEntity, Error>
+      func updateProfile(firstName: String?, lastName: String?, avatarUrl: String?) async -> Result<UserProfileEntity, Error>
 }
