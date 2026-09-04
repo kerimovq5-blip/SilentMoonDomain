@@ -8,32 +8,93 @@
 import Foundation
 
 public protocol SilentMoonRepository: Sendable {
-    func register(name: String, email: String, password: String) async -> Result<RegisterResponseEntity, Error>
     
-    func login(email: String, password: String) async -> Result<AuthResponseEntity, Error>
+    func register(
+        name: String,
+        email: String,
+        password: String
+    ) async -> Result<RegisterResponseEntity, Error>
     
-    func verifyEmail(email: String, otp: String) async -> Result<AuthResponseEntity, Error>
+    func login(
+        email: String,
+        password: String
+    ) async -> Result<AuthResponseEntity, Error>
     
-    func resendOtp(email: String) async -> Result<ResendOtpResponseEntity, Error>
-    func googleLogin(idToken: String) async -> Result<AuthResponseEntity, Error>
-    func forgotPassword(email: String) async -> Result<SimpleMessageResponseEntity, Error>
-    func resetPassword(email: String, otp: String, newPassword: String) async -> Result<SimpleMessageResponseEntity, Error>
-    func refreshToken() async -> Result<AuthResponseEntity, Error>
+    func verifyEmail(
+        email: String,
+        otp: String
+    ) async -> Result<AuthResponseEntity, Error>
+    
+    func resendOtp(
+        email: String
+    ) async -> Result<ResendOtpResponseEntity, Error>
+    
+    func googleLogin(
+        idToken: String
+    ) async -> Result<AuthResponseEntity, Error>
+    
+    func forgotPassword(
+        email: String
+    ) async -> Result<SimpleMessageResponseEntity, Error>
+    
+    func resetPassword(
+        email: String,
+        otp: String,
+        newPassword: String
+    ) async -> Result<SimpleMessageResponseEntity, Error>
+    
+    func refreshToken(
+        
+    ) async -> Result<AuthResponseEntity, Error>
+    
     func logout() async -> Result<Void, Error>
     
-    func search(query: String, type: String?, page: Int, limit: Int) async -> Result<SearchResponseEntity, Error>
+    func search(
+        query: String,
+        type: String?,
+        page: Int,
+        limit: Int)
+    async -> Result<SearchResponseEntity, Error>
     
     func getTopics() async -> Result<[ChooseTopicEntity], Error>
-    func updateTopics(topicIds: [Int]) async -> Result<[ChooseTopicEntity], Error>
+    
+    func updateTopics(
+        topicIds: [Int]
+    ) async -> Result<[ChooseTopicEntity], Error>
     
     func getReminders() async -> Result<[ReminderResponseEntity], Error>
-    func setReminder(time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
-    func updateReminder(id: Int, time: String, days: [Int], message: String) async -> Result<ReminderResponseEntity, Error>
-    func deleteReminder(id: Int) async -> Result<Void, Error>
     
-    func getCourses(page: Int, limit: Int) async -> Result<CoursesResponseEntity, Error>
-    func getCourseDetail(id: Int) async -> Result<CourseEntity, Error>
+    func setReminder(
+        time: String,
+        days: [Int],
+        message: String
+    ) async -> Result<ReminderResponseEntity, Error>
+    
+    func updateReminder(
+        id: Int,
+        time: String,
+        days: [Int],
+        message: String
+    ) async -> Result<ReminderResponseEntity, Error>
+    
+    func deleteReminder(
+        id: Int
+    ) async -> Result<Void, Error>
+    
+    func getCourses(
+        page: Int,
+        limit: Int
+    ) async -> Result<CoursesResponseEntity, Error>
+    
+    func getCourseDetail(
+        id: Int
+    ) async -> Result<CourseEntity, Error>
     
     func getProfile() async -> Result<UserProfileEntity, Error>
-      func updateProfile(firstName: String?, lastName: String?, avatarUrl: String?) async -> Result<UserProfileEntity, Error>
+    
+      func updateProfile(
+        firstName: String?,
+        lastName: String?,
+        avatarUrl: String?
+      ) async -> Result<UserProfileEntity, Error>
 }
