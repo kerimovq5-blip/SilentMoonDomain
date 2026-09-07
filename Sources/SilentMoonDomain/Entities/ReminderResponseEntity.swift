@@ -13,7 +13,12 @@ public struct ReminderResponseEntity: Sendable {
     public let days: [Int]
     public let message: String
     
-    public init (id: Int, time: String, days: [Int], message: String) {
+    public init (
+        id: Int,
+        time: String,
+        days: [Int],
+        message: String
+    ) {
         self.id = id
         self.time = time
         self.days = days

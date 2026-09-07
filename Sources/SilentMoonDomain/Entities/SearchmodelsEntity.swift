@@ -18,7 +18,17 @@ public struct CourseSummaryEntity : Sendable{
     public let isFeatured: Bool
     public let narrators: [String]
     
-    public init(id: Int, title: String, subtitle: String, type: String, categoryId: Int, imageUrl: String, durationSec: Int, isFeatured: Bool, narrators: [String]) {
+    public init(
+        id: Int,
+        title: String,
+        subtitle: String,
+        type: String,
+        categoryId: Int,
+        imageUrl: String,
+        durationSec: Int,
+        isFeatured: Bool,
+        narrators: [String]
+    ) {
         self.id = id
         self.title = title
         self.subtitle = subtitle
@@ -37,7 +47,12 @@ public struct PaginationMetaEntity : Sendable{
     public let total: Int
     public let totalPages: Int
     
-    public init (page: Int, limit: Int, total: Int, totalPages: Int) {
+    public init (
+        page: Int,
+        limit: Int,
+        total: Int,
+        totalPages: Int
+    ) {
         self.page = page
         self.limit = limit
         self.total = total

@@ -12,7 +12,11 @@ public struct RegisterResponseEntity: Sendable {
     public let email: String
     public let otpExpiresAt: String
     
-    public init(message: String, email: String , otpExpiresAt: String) {
+    public init(
+        message: String,
+        email: String ,
+        otpExpiresAt: String
+    ) {
         self.message = message
         self.email = email
         self.otpExpiresAt = otpExpiresAt

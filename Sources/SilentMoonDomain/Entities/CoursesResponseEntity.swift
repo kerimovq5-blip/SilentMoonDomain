@@ -13,7 +13,12 @@ public struct CourseEntity: Sendable{
     public let description: String?
     public let imageUrl: String?
     
-    public init(id: Int, title: String, description: String? = nil, imageUrl: String? = nil) {
+    public init(
+        id: Int,
+        title: String,
+        description: String? = nil,
+        imageUrl: String? = nil
+    ) {
         self.id = id
         self.title = title
         self.description = description
@@ -27,7 +32,12 @@ public struct CoursesResponseEntity: Sendable {
     public let limit: Int
     public let totalPages: Int?
     
-    public init(items: [CourseEntity], page: Int, limit: Int, totalPages: Int? = nil) {
+    public init(
+        items: [CourseEntity],
+        page: Int,
+        limit: Int,
+        totalPages: Int? = nil
+    ) {
         self.items = items
         self.page = page
         self.limit = limit

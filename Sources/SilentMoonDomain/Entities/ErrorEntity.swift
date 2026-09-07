@@ -10,7 +10,11 @@ public struct ErrorEntity : Error , Sendable {
    public let statusmessage: String
   public let success: Bool
     
-    public init(statuscode: Int, statusmessage: String, success: Bool) {
+    public init(
+        statuscode: Int,
+        statusmessage: String,
+        success: Bool
+    ) {
         self.statuscode = statuscode
         self.statusmessage = statusmessage
         self.success = success
